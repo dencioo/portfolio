@@ -80,27 +80,60 @@ body {
 
 .main-container {
   background-color: #d9d9d9;
-  display: grid;
+  display: grid;         /* needed for grid layout */
   gap: 2rem;
   max-width: 1000px;
   width: 100%;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: 
-  "c-container c-container git-container  git-container python-container python-container"
-  ". htmlcss-container  htmlcss-container js-container js-container ."
-  "django-container  django-container drf-container  drf-container  insomnia-container insomnia-container"
-  ". flask-container  flask-container sqlite-container sqlite-container ."
-  "mongodb-container mongodb-container express-container express-container jwt-container jwt-container"
-  ". cloudinary-container cloudinary-container reactleaflet-container reactleaflet-container ."
-  "react-container react-container tailwind-container tailwind-container nominatim-container nominatim-container";
-
   margin: 2rem auto;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
   outline: 2px dashed black;
   outline-offset: 10px;
-  
+}
+
+.main-container.languages {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "c-container c-container js-container js-container python-container python-container ";
+}
+
+.main-container.frontend {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "react-container react-container tailwind-container tailwind-container reactleaflet-container reactleaflet-container"
+    ". htmlcss-container htmlcss-container htmlcss-container htmlcss-container .";
+}
+
+.main-container.backend {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "nodejs-container nodejs-container express-container express-container jwt-container jwt-container"
+    "flask-container flask-container drf-container drf-container django-container django-container";
+}
+
+.main-container.databases {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "mongodb-container mongodb-container mongodb-container sqlite-container sqlite-container sqlite-container";
+}
+
+.main-container.tools {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "cloudinary-container cloudinary-container cloudinary-container nominatim-container nominatim-container nominatim-container"
+    "git-container git-container git-container insomnia-container insomnia-container insomnia-container"
+    ". githubgitlab-container githubgitlab-container githubgitlab-container githubgitlab-container .";
 }
 
 .main-container > div {
@@ -226,6 +259,16 @@ body {
   grid-area: nominatim-container;
 }
 
+.nodejs-container {
+  background-color: white;
+  grid-area: nodejs-container;
+}
+
+.githubgitlab-container {
+  background-color: white;
+  grid-area: githubgitlab-container;
+}
+
 /* Mobile layout */
 
 @media (max-width: 767px) {
@@ -294,19 +337,6 @@ body {
     width: 100%;
     max-width: 100vw;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-    "c-container c-container git-container"
-    "python-container python-container python-container"
-    "htmlcss-container htmlcss-container js-container"
-    "django-container django-container drf-container"
-    "insomnia-container insomnia-container insomnia-container"
-    "flask-container flask-container sqlite-container"
-    "mongodb-container mongodb-container express-container"
-    "jwt-container jwt-container cloudinary-container"
-    "reactleaflet-container reactleaflet-container"
-    "react-container react-container tailwind-container"
-    "nominatim-container nominatim-container";
     transform-origin: top center;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -314,7 +344,48 @@ body {
     margin: 1rem auto;
     overflow-x: hidden;
     box-sizing: border-box;
+  }
 
+  .main-container.languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "c-container js-container"
+      "python-container python-container";
+  }
+
+  .main-container.frontend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "react-container tailwind-container"
+      "reactleaflet-container reactleaflet-container"
+      "htmlcss-container htmlcss-container";
+  }
+
+  .main-container.backend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "nodejs-container express-container"
+      "jwt-container jwt-container"
+      "flask-container drf-container"
+      "django-container django-container";
+  }
+
+  .main-container.databases {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "mongodb-container sqlite-container";
+  }
+
+  .main-container.tools {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-areas:
+      "cloudinary-container nominatim-container"
+      "git-container insomnia-container";
+    gap: 1rem;
   }
 
   .main-container > div {
@@ -340,26 +411,73 @@ body {
 }
 
 @media (max-width: 427px) {
-  .main-container {
+
+  .main-container.languages {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-      "c-container c-container"
-      "git-container git-container"
-      "python-container python-container"
-      "htmlcss-container htmlcss-container"
-      "js-container js-container"
-      "django-container django-container"
-      "drf-container drf-container"
-      "insomnia-container insomnia-container"
-      "flask-container flask-container"
-      "sqlite-container sqlite-container"
-      "mongodb-container mongodb-container"
-      "express-container express-container"
-      "jwt-container jwt-container"
-      "cloudinary-container cloudinary-container"
-      "reactleaflet-container reactleaflet-container"
-      "react-container react-container"
-      "tailwind-container tailwind-container"
-      "nominatim-container nominatim-container";
+    grid-template-areas:
+      "c-container"
+      "js-container"
+      "python-container";
+    gap: 1rem;
+  }
+
+  .main-container.frontend {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "react-container"
+      "tailwind-container"
+      "reactleaflet-container"
+      "htmlcss-container";
+    gap: 1rem;
+  }
+
+  .main-container.backend {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nodejs-container"
+      "express-container"
+      "jwt-container"
+      "flask-container"
+      "drf-container"
+      "django-container";
+    gap: 1rem;
+  }
+
+  .main-container.databases {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "mongodb-container"
+      "sqlite-container";
+    gap: 1rem;
+  }
+
+  .main-container.tools {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cloudinary-container"
+      "nominatim-container"
+      "git-container"
+      "insomnia-container";
+    gap: 1rem;
+  }
+
+  .main-container > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 120px;
+    padding: 8px;
+  }
+
+  .images img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .main-container p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-top: 0.5rem;
   }
 }
