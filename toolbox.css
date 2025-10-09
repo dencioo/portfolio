@@ -89,7 +89,10 @@ body {
   "c-container c-container git-container  git-container python-container python-container"
   ". htmlcss-container  htmlcss-container js-container js-container ."
   "django-container  django-container drf-container  drf-container  insomnia-container insomnia-container"
-  ". flask-container  flask-container sqlite-container sqlite-container .";
+  ". flask-container  flask-container sqlite-container sqlite-container ."
+  "mongodb-container mongodb-container express-container express-container jwt-container jwt-container"
+  ". cloudinary-container cloudinary-container reactleaflet-container reactleaflet-container ."
+  "react-container react-container tailwind-container tailwind-container nominatim-container nominatim-container";
 
   margin: 2rem auto;
   padding: 2rem;
@@ -183,6 +186,46 @@ body {
   grid-area: sqlite-container;
 }
 
+.mongodb-container {
+  background-color: white;
+  grid-area: mongodb-container;
+}
+
+.express-container {
+  background-color: white;
+  grid-area: express-container;
+}
+
+.jwt-container {
+  background-color: white;
+  grid-area: jwt-container;
+}
+
+.cloudinary-container {
+  background-color: white;
+  grid-area: cloudinary-container;
+}
+
+.reactleaflet-container {
+  background-color: white;
+  grid-area: reactleaflet-container;
+}
+
+.react-container {
+  background-color: white;
+  grid-area: react-container;
+}
+
+.tailwind-container {
+  background-color: white;
+  grid-area: tailwind-container;
+}
+
+.nominatim-container {
+  background-color: white;
+  grid-area: nominatim-container;
+}
+
 /* Mobile layout */
 
 @media (max-width: 767px) {
@@ -258,7 +301,12 @@ body {
     "htmlcss-container htmlcss-container js-container"
     "django-container django-container drf-container"
     "insomnia-container insomnia-container insomnia-container"
-    "flask-container flask-container sqlite-container";
+    "flask-container flask-container sqlite-container"
+    "mongodb-container mongodb-container express-container"
+    "jwt-container jwt-container cloudinary-container"
+    "reactleaflet-container reactleaflet-container"
+    "react-container react-container tailwind-container"
+    "nominatim-container nominatim-container";
     transform-origin: top center;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -304,6 +352,14 @@ body {
       "drf-container drf-container"
       "insomnia-container insomnia-container"
       "flask-container flask-container"
-      "sqlite-container sqlite-container";
+      "sqlite-container sqlite-container"
+      "mongodb-container mongodb-container"
+      "express-container express-container"
+      "jwt-container jwt-container"
+      "cloudinary-container cloudinary-container"
+      "reactleaflet-container reactleaflet-container"
+      "react-container react-container"
+      "tailwind-container tailwind-container"
+      "nominatim-container nominatim-container";
   }
 }
