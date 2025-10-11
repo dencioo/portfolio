@@ -5,7 +5,7 @@ header {
   height: 60px;
   padding: 0 2rem;
   margin-top: 0;
-  background-color: #f5f5f5;
+  background-color: #2d5016;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -23,7 +23,7 @@ header .right a {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
   font-size: 1.5rem;
-  color: #333;
+  color: white;
   text-align: center;
   
   text-decoration: none;
@@ -41,19 +41,34 @@ header .right a {
   vertical-align: middle;
 }
 
-header .left a:hover {
-  background-color: #B4B4B4;
+header .left a:hover, 
+header .right a:hover {
+  background-color: #3a6b2f;
+  color: white;
+  border: 2px solid #f5f5f5;
+}
+
+header .left a img,
+header .right a img {
+    filter: brightness(0) invert(1); /* turns dark icon white */
+    transition: filter 0.3s ease;
+}
+
+header .left a:hover img,
+header .right a:hover img {
+  filter: brightness(1.1) invert(1); /* makes dark icons white */
 }
 
 .title {
   display: inline-block;
   margin: 16px auto 16px 200px;
   padding: 8px 16px;
-  background-color: #d9d9d9;
+  background-color: #f5f5f5;
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .title h1 {
+  color: #2d5016;
   font-weight: 400;
 }
 
@@ -61,7 +76,7 @@ body {
   font-family: 'JetBrains Mono', monospace;
   font-size: 18px;
   letter-spacing: -1px;
-  background-color: white;
+  background-color: #f0f4f1;
   background-image: url(img/architect.svg);
   background-repeat: repeat;
 }
@@ -83,7 +98,7 @@ body {
 }
 
 .personal-container, .research-container, .soon-container {
-  background-color: #D9D9D9;
+  background-color: white;
   padding: 1.5rem;
   border-radius: 8px;
   box-sizing: border-box;
@@ -96,15 +111,32 @@ body {
 }
 
 .personal-container h2, .research-container h2, .soon-container h2 {
-  background-color: #f5f5f5;
+  color: #2d5016;
+  background-color: #f5f9f5;
   display: inline-block;
   border-radius: 8px;
   padding: 0.5rem;
 }
 
-.personal-container p, .research-container p, .soon-container p {
+.personal-container p:not(.project-date), 
+.research-container p:not(.project-date), 
+.soon-container p:not(.project-date) {
   border-left: 4px solid #f5f5f5;
   padding-left: 12px;
+}
+
+.project-date {
+  display: inline-block;
+  background-color: white;
+  border: 1.5px dashed #333;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  color: #2d5016;
+  margin: 4px 0 12px 0; 
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+  transform: rotate(-0.25deg); 
 }
 
 .project-btn {
@@ -114,25 +146,26 @@ body {
 }
 
 .project-btn a {
-  background-color: black;
+  background-color: #2d5016;
   color: white;
   font-family: 'JetBrains Mono', monospace;
   text-decoration: none;
   padding: 8px 14px;
   border-radius: 6px;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid #2d5016;
 }
 
 .project-btn a:hover {
   background-color: #f5f5f5;
-  color: #333;
-  border: 2px solid #333;
+  color: #1a3a3a;
+  border: 2px solid #2d5016;
 }
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.4);
-  padding: 1rem;
+  background-color: #f5f9f5;
+  color: #1a3a3a;
+  padding: 1rem;  
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease, transform 0.3s ease;
@@ -146,18 +179,18 @@ body {
 }
 
 footer {
+  background-color: #2d5016;
   text-align: center;
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.1rem;
-  color: black;
+  color: white;
   padding: 2rem 0;
   border-top: 1px solid #ccc;
   margin-top: 4rem;
-  background-color: rgba(0, 0, 0, 0.09)
 }
 
 .footer-links a {
-  color: black;
+  color: white;
   text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s ease;

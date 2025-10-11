@@ -6,7 +6,7 @@ header {
   align-items: center;
   height: 60px;
   padding: 0 2rem;
-  background-color: #f5f5f5;
+  background-color: #2d5016;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -24,7 +24,7 @@ header .right a {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
   font-size: 1.5rem;
-  color: #333;
+  color: white;
   text-align: center;
   
   text-decoration: none;
@@ -37,8 +37,17 @@ header .right a {
 
 }
 
-header .left a:hover {
-  background-color: #B4B4B4;
+header .left a img,
+header .right a img {
+  filter: brightness(0) invert(1); /* icons white by default */
+  transition: filter 0.3s ease;
+}
+
+header .left a:hover,
+header .right a:hover {
+  background-color: #3a6b2f; /* slightly lighter green on hover */
+  color: white;
+  border: 2px solid #f5f5f5;
 }
 
 .icon {
@@ -50,11 +59,12 @@ header .left a:hover {
   display: inline-block;
   margin: 16px auto 16px 200px;
   padding: 8px 16px;
-  background-color: #d9d9d9;
+  background-color: #f5f5f5;
   box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .title h1 {
+  color: #2d5016;
   font-weight: 400;
 }
 
@@ -93,6 +103,7 @@ body {
 }
 
 .main-container.languages {
+  background-color: #e6f1d6;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
@@ -101,6 +112,7 @@ body {
 }
 
 .main-container.frontend {
+  background-color: #d4e4ff;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
@@ -110,6 +122,7 @@ body {
 }
 
 .main-container.backend {
+  background-color: #ffe6d6;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
@@ -119,6 +132,7 @@ body {
 }
 
 .main-container.databases {
+  background-color: #f0e6ff;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
@@ -127,6 +141,7 @@ body {
 }
 
 .main-container.tools {
+  background-color: #fff8d6;
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
@@ -270,18 +285,18 @@ body {
 }
 
 footer {
+  background-color: #2d5016;
   text-align: center;
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.1rem;
-  color: black;
+  color: white;
   padding: 2rem 0;
   border-top: 1px solid #ccc;
   margin-top: 8rem;
-  background-color: rgba(0, 0, 0, 0.09)
 }
 
 .footer-links a {
-  color: black;
+  color: white;
   text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s ease;
