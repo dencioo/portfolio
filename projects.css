@@ -130,6 +130,44 @@ body {
   border: 2px solid #333;
 }
 
+.project-card {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+/* subtle entrance animation */
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
+  color: black;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+  margin-top: 3rem;
+  background-color: rgba(0, 0, 0, 0.09)
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #b4b4b4;
+}
+
+
 @media (max-width:767px) {
 
   header {
