@@ -11,14 +11,19 @@
 }
 
 header {
+  background: #0d0d0d;
+  color: #e3f0dc;
+  border-bottom: 2px dashed #e3f0dc;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   position: relative;
   z-index: 1;
+  padding: 12px 12px;
 }
 
 header a {
-  margin-top: 32px;
+  
   margin-right: 34px;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
@@ -67,9 +72,10 @@ main > div {
   padding: 1rem;
   max-width: 800px;
   overflow-wrap: break-word;
-  background-color: #d9d9d9;
+  background-color: #EDEAE5;
+  color: #222;
   border-radius: 8px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
 }
 
 .profile-section h1 {
@@ -97,23 +103,25 @@ main > div {
 
 .pages a{
   padding: 6px 20px;
-  background-color: #B2ADAD;
+  background-color: #C9C3C3;
   text-decoration: none;
-  color: black;
+  color: #222;
   box-shadow: 0 3px 8px rgba(0,0,0,0.7);
   border-radius: 100px;
   transform: translateY(-10px);
 }
 
 .pages a:hover {
-  background-color: #d9d9d9;
+  background-color: #b0a8a8;
+  color: #111;
+  transform: translateY(-2px) scale(1.03);
 }
 
 .github-icon, .email-icon, .linkedin-logo {
   height: 32px;
   vertical-align: middle;
   display: inline-block;
-  background-color: #AAA6A6;
+  background-color: #C9C3C3;
   padding: 4px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -145,9 +153,9 @@ main > div {
 }
 
 .socials a:hover .github-icon, .socials a:hover .email-icon, .socials a:hover .linkedin-logo {
-  background-color: #d9d9d9;
+  background-color: #b0a8a8;
   transform: scale(1.05);
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 .profile-photo {
   height: 500px;
@@ -156,6 +164,15 @@ main > div {
 .pipesymbol {
   margin-left: -5px;
   animation: blink 1s step-end infinite;
+}
+
+footer {
+  background: #0d0d0d;
+  color: #e3f0dc;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px dashed #e3f0dc;
+  overflow: hidden;
 }
 
 /* @font-face {
