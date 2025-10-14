@@ -437,7 +437,8 @@ footer {
     grid-template-columns: 1fr 1fr; /* 2 columns */
     grid-template-areas:
       "cloudinary-container nominatim-container"
-      "git-container insomnia-container"
+      "vscode-container git-container"
+      "insomnia-container postman-container "
       "githubgitlab-container githubgitlab-container";
     gap: 1rem;
   }
@@ -511,8 +512,10 @@ footer {
     grid-template-areas:
       "cloudinary-container"
       "nominatim-container"
+      "vscode-container"
       "git-container"
       "insomnia-container"
+      "postman-container"
       "githubgitlab-container";
     gap: 1rem;
   }
