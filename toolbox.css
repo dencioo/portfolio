@@ -127,7 +127,8 @@ body {
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    "nodejs-container nodejs-container express-container express-container jwt-container jwt-container"
+    "nodejs-container nodejs-container express-container express-container mongoose-container mongoose-container"
+    "jwt-container jwt-container jwt-container jwt-container jwt-container jwt-container"
     "flask-container flask-container drf-container drf-container django-container django-container";
 }
 
@@ -146,8 +147,8 @@ body {
   gap: 2rem;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    "cloudinary-container cloudinary-container cloudinary-container nominatim-container nominatim-container nominatim-container"
-    "git-container git-container git-container insomnia-container insomnia-container insomnia-container"
+    "cloudinary-container cloudinary-container nominatim-container nominatim-container vscode-container vscode-container"
+    "git-container git-container insomnia-container insomnia-container postman-container postman-container"
     ". githubgitlab-container githubgitlab-container githubgitlab-container githubgitlab-container .";
 }
 
@@ -284,6 +285,21 @@ body {
   grid-area: githubgitlab-container;
 }
 
+.mongoose-container {
+  background-color: white;
+  grid-area: mongoose-container;
+}
+
+.vscode-container {
+  background-color: white;
+  grid-area: vscode-container;
+}
+
+.postman-container {
+  background-color: white;
+  grid-area: postman-container;
+}
+
 footer {
   background-color: #2d5016;
   text-align: center;
@@ -297,7 +313,6 @@ footer {
 
 .footer-links a {
   color: white;
-  text-decoration: none;
   margin: 0 5px;
   transition: color 0.3s ease;
 }
@@ -405,6 +420,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "nodejs-container express-container"
+      "mongoose-container mongoose-container"
       "jwt-container jwt-container"
       "flask-container drf-container"
       "django-container django-container";
@@ -474,6 +490,7 @@ footer {
     grid-template-areas:
       "nodejs-container"
       "express-container"
+      "mongoose-container"
       "jwt-container"
       "flask-container"
       "drf-container"
