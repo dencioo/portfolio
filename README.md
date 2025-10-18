@@ -1,8 +1,21 @@
 # Dean Harley Pal | Full-Stack Web Developer Portfolio
 
-Welcome to my personal portfolio! This project showcases my education, toolbox (skills & technologies), and projects. Built using HTML, CSS, and a touch of JavaScript, this portfolio reflects my journey as a Full-Stack Web Developer, learning both frontend and backend development
+Welcome to my portfolio!
+I’m a Web and Backend Developer passionate about building real-world apps that connect frontend design with backend logic.
+This site showcases my education, skills, and featured projects, built using HTML, CSS, and JavaScript.
 
-- **Frontend:** JavaScript, CSS, React.js (with Hooks & Router), Tailwind CSS
-- **Backend:** Node.js, Express.js, Django, Flask, Django REST Framework, RESTful APIs, JSON Web Tokens (JWT), Python
-- **Databases:** MongoDB (Atlas & Compass), SQLite
-- **Tools & Others:** Git, Github/Gitlab, Postman, Insomnia, Cloudinary, Nominatim, Leaflet/React-Leaflet
+Live Site: [Visit Portfolio](https://dencioo.github.io/portfolio/)
+
+- **Web Development**: HTML, CSS, JavaScript, React, Node.js, Express, MongoDB
+- **Frontend**: React.js, Tailwind CSS, Bootstrap
+- **Backend**: Node.js, Express.js, Mongoose, JWT Auth, Flask, Django, Django REST Framework
+- **Databases**: MongoDB, SQLite, MongoDB Atlas
+- **API Development**: RESTful APIs, JWT Authentication, Postman, Insomnia
+- **Tools**: Git, GitHub, GitLab, VS Code, Cloudinary, Nominatim, Leaflet.js, Agile Workflow
+- **CS Fundamentals**: Algorithms, Data Structures, Pointers, Memory Management (C)
+- **Other Skills**: Basic photo/video editing, time management, adaptability, organization
+- **Platforms**: Windows & Linux (Linux Mint, Pop!_OS)
+
+## Connect With Me<br>
+📧 paldeanharley@gmail.com<br>
+🔗 [LinkedIn](https://www.linkedin.com/in/paldeanharley/)<br>  
